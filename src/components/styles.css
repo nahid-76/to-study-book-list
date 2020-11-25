@@ -1,0 +1,17 @@
+.datepicker-input {
+    width:100%;
+   font-size:1em;
+   font-family: 'Vazir', Arial, sans-serif;
+    font-weight:normal;
+   padding:20px;
+   box-sizing:border-box;
+   margin:6px 0;
+   background-color:#3c1f3c;
+   color:#fff;
+   border:0;
+   border-radius:10px;
+   direction:rtl;
+}
+.datepicker-input:focus { 
+           outline: none; 
+        }
