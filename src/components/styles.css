@@ -14,4 +14,18 @@
 }
 .datepicker-input:focus { 
            outline: none; 
-        }
+}
+.calendarContainer.jalaali {
+         direction: rtl;
+         top: 50px;
+}
+ .calendarButton {
+         background: #6d3d6d;
+}
+.calendarButton:hover{
+   background: #6d3d6d;
+}
+.calendarContainer .selected button, .calendarContainer .selected button:active, .calendarContainer .selected button:focus, .calendarContainer .selected button:hover :not([disabled]) {
+   background-color: #6d3d6d;
+   color: #fff;
+}

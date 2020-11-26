@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Title, Auther, Li } from './styledcomponents/bookdetailsstyle'
+import { Title, Auther, Li, P } from './styledcomponents/bookdetailsstyle'
 import { BookContext } from '../contexts/bookcontext'
 const BookDetails = ({ book }) => {
     const { dispatch } = useContext(BookContext);
@@ -11,7 +11,8 @@ const BookDetails = ({ book }) => {
             <div>
                 <Title>{book.title}</Title>
                 <Auther>{book.auther}</Auther>
-                
+                <P>{book.date}</P>
+
             </div>
         </Li>
     );

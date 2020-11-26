@@ -8,9 +8,15 @@ export const Auther = styled.div`
 font-size:.9em;
 color:#ddd;
 `;
+export const P = styled.div`
+margin:0;
+font-size:.9em;
+color:#ddd;
+`;
 export const Li = styled.li`
 background-color:#6d3d6d;
 padding:10px;
+text-align: right;
 border-radius:10px;
 margin:10px 0px;
 display:flex;

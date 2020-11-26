@@ -8,7 +8,7 @@ export const BookReducer = (state, action) => {
                     {
                         title: action.book.title,
                         auther: action.book.auther,
-                        
+                        date: action.book.date, 
                         id: uuid()
                     }
                 ]

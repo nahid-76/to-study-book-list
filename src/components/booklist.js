@@ -1,15 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { BookContext } from '../contexts/bookcontext'
-import { EmptyList, BookListStyle, Ul } from './styledcomponents/bookliststyle'
+import { BookListStyle, Ul, RightButton, LeftButton, Btngroup } from './styledcomponents/bookliststyle'
 import BookDetails from './bookdetail'
 const BookList = () => {
     const { books } = useContext(BookContext);
-
-    return(  
-      <BookListStyle>
+    const [filter, setFilter] = useState(false);
+    let today = new Date().toLocaleDateString('fa-IR').replace(/([۰-۹])/g, token => String.fromCharCode(token.charCodeAt(0) - 1728));
+    const studybooks = filter ? books.filter(book => book.date === today) : books;
+    return (
+        <BookListStyle>
+            <Btngroup>
+                <RightButton onClick={() => setFilter(false)}>همه</RightButton>
+                <LeftButton onClick={() => setFilter(true)}>کتاب های امروز</LeftButton>
+            </Btngroup>
             <Ul>
                 {
-                    books.map(book => {
+                    studybooks.map(book => {
                         return (
                             <BookDetails
                                 key={book.id}
@@ -21,8 +27,8 @@ const BookList = () => {
                 }
             </Ul>
         </BookListStyle>
-        )
-    
+    )
+
 }
 
 export default BookList;

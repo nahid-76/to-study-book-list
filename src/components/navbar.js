@@ -9,7 +9,7 @@ const NavBar = () => {
             {books.length === 0 ?
                 <p>کتابی برای مطالعه وجود ندارد</p> :
                 <p>
-                {books.length}
+              تعداد  {books.length} عدد کتاب برای مطالعه وجود دارد
                 </p>
             }
         </StyledNavBar>

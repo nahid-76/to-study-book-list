@@ -2,13 +2,18 @@ import styled from 'styled-components';
 export const Form = styled.form`
 padding:20px;
 `;
+export const H4 = styled.h4`
+color:red;
+margin: 0;
+text-align: center;
+`;
 export const TextInput = styled.input.attrs({
-    type: "text",
+  type: "text",
 })` 
    width:100%;
    font-size:1em;
    font-family: 'Vazir', Arial, sans-serif;
-    font-weight:normal;
+   font-weight:normal;
    padding:20px;
    box-sizing:border-box;
    margin:6px 0;
@@ -22,7 +27,7 @@ export const TextInput = styled.input.attrs({
   }
   `;
 export const SubmitInput = styled.input.attrs({
-    type: "submit",
+  type: "submit",
 })` 
    padding:10px 20px;
    display:block;
@@ -39,6 +44,9 @@ export const SubmitInput = styled.input.attrs({
    border:0;
    :focus {
     outline:none;
+  }
+  :hover{
+      opacity:.9;
   }
   
   `;
