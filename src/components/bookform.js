@@ -28,15 +28,14 @@ const BookForm = () => {
         })
         setTitle('');
         setAuther('');
-        let today = new Date().toLocaleDateString('fa-IR').replace(/([۰-۹])/g, token => String.fromCharCode(token.charCodeAt(0) - 1728));
-        console.log(today===date.format('jYYYY/jM/jD'));
+        setDate(null);
 
     }
     return (
         <Form onSubmit={handleSubmit}>
             {isEmpty && <H4>پر کردن تمام فیلد ها اجباری است</H4>}
             <TextInput value={title} onChange={(e) => setTitle(e.target.value)} placeholder="عنوان" />
-            <TextInput onChange={(e) => setAuther(e.target.value)} placeholder="نویسنده" />
+            <TextInput value={auther} onChange={(e) => setAuther(e.target.value)} placeholder="نویسنده" />
             <DatePicker
                 persianDigits={false}
                 onChange={date => setDate(date)}
